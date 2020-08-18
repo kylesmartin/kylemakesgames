@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>kylemakesgames</title>
+  <meta name="description" content="Kyle Martin's game development portfolio.">
+  <meta name="author" content="Kyle Martin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #021859;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" onclick="scrollToAbout()" style="color: #0b9ed9;">About<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" onclick="scrollToGames()" style="color: #0b9ed9;">Games<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" onclick="scrollToContact()" style="color: #0b9ed9;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- particles.js container -->
+  <div id="particles-js"></div>
+  <div class="text-overlay1">
+    <h1>Kyle Martin</h1>
+  </div>
+  <div class="text-overlay2">
+    <h1>Game Developer & Lifelong Learner</h1>
+  </div>
+
+  <div class="jumbotron jumbotron-fluid" id = "aboutme" style="background-color: #021859;">
+    <div class="container">
+      <h1 class="display-4" style="color: #0b9ed9;">Hello!</h1>
+      <p class="lead" style="color: #0b9ed9;">
+        <br>
+        My name is Kyle Martin and I love to make games.  
+        <br><br>
+        I love to code. I love art and stories. I love music. And I believe these passions all go hand in hand.
+        My greatest ambitions lie at the intersection of art and technology.
+        For me, there is no better medium for artistic and technical expression than video games. 
+        <br><br>
+        At my core, I am a self starter that believes learning is best accomplished through creating, and learning game development was one of the best decisions I've ever made. 
+        Through making my first two games and learning from other creators, I have developed a passion for all facets of video game development and design: programming, 3D-modeling, music composition, storytelling, lighting and rendering, and beyond.
+        I look forward to future projects, collaborations, and opportunities in the world of games! 
+      </p>
+    </div>
+  </div>
+
+  <header>
+    <div class="overlay" id = "games"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="pizzafrenzydemo.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3">Pizza Frenzy</h1>
+          <p class="lead mb-0">A game about delivering pizzas.</p>
+          <br>
+          <button type="button" onclick="window.location.href='https://kylemakesgames.itch.io/pizza-frenzy';" style="background-color: #021859; color: #0b9ed9; border: 0 none; width: 100px;" class="btn btn-primary">Play</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="playbackdemo.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3">Playback</h1>
+          <p class="lead mb-0">A game about traversing city rooftops with the ability to record and playback movements.</p>
+          <br>
+          <button type="button" onclick="window.location.href='https://kylemakesgames.itch.io/playback';" style="background-color: #021859; color: #0b9ed9; border: 0 none; width: 100px;" class="btn btn-primary">Play</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="jumbotron jumbotron-fluid" id ="contact" style="background-color: #021859;">
+    <div class="container">
+      <h1 class="display-4" style="color: #0b9ed9;">Contact Me</h1>
+      <p class="lead" style="color: #0b9ed9;">
+        <br>
+        I am always willing to connect with like-minded individuals. You can email me at kylesmartin19@gmail.com or connect with me on social media!
+
+      </p>
+    </div>
+      <!-- Add font awesome icons -->
+  <a href="https://www.instagram.com/kylemakesgames/" class="fa fa-instagram"></a>
+  <a href="https://www.linkedin.com/in/kyle-martin-81313114a/" class="fa fa-linkedin"></a>
+  <a href="https://github.com/kylesmartin" class="fa fa-github"></a>
+  </div>
+ 
+  <!-- scripts -->
+  <script>
+  function scrollToAbout() {
+    const anchor = document.querySelector('#aboutme')
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  function scrollToContact() {
+    const anchor = document.querySelector('#contact')
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  function scrollToGames() {
+    const anchor = document.querySelector('#games')
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+  </script>
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
